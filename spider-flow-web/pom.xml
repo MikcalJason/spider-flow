@@ -27,6 +27,7 @@
 					<finalName>spider-flow</finalName>
 					<mainClass>org.spiderflow.SpiderApplication</mainClass>
 				</configuration>
+				<version>3.1.6</version>
 			</plugin>
 		</plugins>
 	</build>
