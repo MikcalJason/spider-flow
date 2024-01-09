@@ -6,8 +6,10 @@ import org.spiderflow.annotation.Example;
 import org.spiderflow.executor.FunctionExtension;
 import org.springframework.stereotype.Component;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 @Component
@@ -53,5 +55,10 @@ public class ListFunctionExtension implements FunctionExtension{
 		Collections.shuffle(list);
 		return list;
 	}
-	
+
+	@Comment("将数组每一项都增加一个前缀")
+	@Example("${arrayVar.mapAddPrefix('http://127.0.0.1')}")
+	public static List<?> mapAddPrefix(List<?> list, String prefix) {
+		return list.stream().map(i -> String.format("%s%s", prefix, i)).collect(Collectors.toList());
+	}
 }

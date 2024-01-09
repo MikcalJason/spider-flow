@@ -281,6 +281,7 @@ public class Spider {
 									context.setRunning(false);
 									return;
 								}
+								logger.debug("开始执行executor:{}",executor.supportShape());
 								//执行节点具体逻辑
 								executor.execute(node, context, nVariables);
 								//当未发生异常时，移除ex变量

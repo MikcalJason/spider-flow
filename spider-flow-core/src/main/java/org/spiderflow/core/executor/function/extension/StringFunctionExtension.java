@@ -68,7 +68,8 @@ public class StringFunctionExtension implements FunctionExtension{
 	public static String xpath(String source,String xpath){
 		return ExtractUtils.getValueByXPath(element(source), xpath);
 	}
-	
+
+
 	@Comment("根据xpath在String变量中查找")
 	@Example("${strVar.xpaths('//a/@href')}")
 	public static List<String> xpaths(String source,String xpath){
