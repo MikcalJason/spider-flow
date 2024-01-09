@@ -12,7 +12,7 @@ import org.springframework.web.socket.server.standard.ServerEndpointExporter;
  * @author Administrator
  *
  */
-@Configuration
+//@Configuration
 public class WebSocketConfiguration {
 	
 	@Bean
